@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Oportunidade Salesforce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+       
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Oportunidade Salesforce</h1>
+    <form action="processar_formulario.php" method="post">
+        <label for="particular">Particular:</label>
+        <input type="checkbox" id="particular" name="particular">
+    </br></br>
+        <label for="nome">Nome da Oportunidade:</label>
+        <input type="text" id="nome" name="nome" required>
+</br>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" step="0.01" required>
+</br>
+        <label for="fase">Fase:</label>
+        <select id="fase" name="fase" required>
+            <option value="Qualificação">Qualificação</option>
+            <option value="Proposta">Proposta</option>
+            <option value="Fechamento">Fechamento</option>
+            <option value="Ganho">Ganho</option>
+            <option value="Perdido">Perdido</option>
+        </select>
+    </br>
+        <label for="tipo">Tipo:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="Nova Oportunidade">Nova Oportunidade</option>
+            <option value="Upsell">Upsell</option>
+            <option value="Renovação">Renovação</option>
+            <option value="Outros">Outros</option>
+        </select>
+    </br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
